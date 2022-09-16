@@ -1,10 +1,9 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://26.47.128.120:18000/jin_xingchang/json-schema/raw/master/git-bundle.json",
+    "$id": "https://raw.githubusercontent.com/chiyuCoder/chiyu-json/master/git-bundle.json",
     "title": "git-bundle.json",
     "type": "object",
-    "required": [
-    ],
+    "required": [],
     "properties": {
         "name": {
             "type": "string",

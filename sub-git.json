@@ -1,12 +1,12 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://26.47.128.120:18000/jin_xingchang/json-schema/raw/master/schema.project-config.json",
+    "$id": "https://raw.githubusercontent.com/chiyuCoder/chiyu-json/master/schema.project-config.json",
     "title": "pces-vue.project-config",
     "description": "configure file for dart-pces-vue-dist(dart-dist).exe",
-    "type":"array",
+    "type": "array",
     "items": {
         "minLength": 1,
-        "type":"object",
+        "type": "object",
         "required": [
             "path",
             "url"
