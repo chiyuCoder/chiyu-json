@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://26.47.128.120:18000/jin_xingchang/json-schema/raw/master/git-bundle.json",
+    "title": "git-bundle.json",
+    "type": "object",
+    "required": [
+    ],
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "example: pces-vue-v3/main, main, ..."
+        },
+        "locateDirectory": {
+            "type": "string",
+            "description": "git bundle file will be located at $packageDirectory/$name$extName"
+        },
+        "extName": {
+            "type": "string",
+            "description": "file's extName. default is .gitbundle"
+        },
+        "logBranchName": {
+            "type": "string",
+            "description": "branch name as save-log of bundle. default is current-branch if --back-branch provided else is dev-mac-jxc"
+        },
+        "partList": {
+            "type": "array",
+            "description": "git bundle create parameters",
+            "items": {
+                "type": "object",
+                "minLength": 1,
+                "required": [
+                    "buildFor",
+                    "runType"
+                ],
+                "properties": {
+                    "logBranchName": {
+                        "type": "string",
+                        "description": "branch name as save-log of bundle. default is current-branch if --back-branch provided else is dev-mac-jxc"
+                    },
+                    "buildFor": {
+                        "type": "string",
+                        "description": "example: to-mac-jxc, to-ft-vm, ..."
+                    },
+                    "runType": {
+                        "enum": [
+                            "pull",
+                            "create"
+                        ],
+                        "description": "pull for git pull, create for git bundle create"
+                    },
+                    "locateDirectory": {
+                        "type": "string",
+                        "description": "git bundle file will be located at $locateDirectory/$name$extName."
+                    },
+                    "extName": {
+                        "type": "string",
+                        "description": "file's extName. default is .gitbundle"
+                    },
+                    "lastCommitHash": {
+                        "type": "string",
+                        "description": "last commit hash before last time of running bundle"
+                    },
+                    "commitHash": {
+                        "type": "string",
+                        "description": "commit hash after last time of running bundle"
+                    }
+                }
+            }
+        }
+    }
+}

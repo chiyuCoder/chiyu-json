@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://26.47.128.120:18000/jin_xingchang/json-schema/raw/master/schema.project-config.json",
+    "title": "pces-vue.project-config",
+    "description": "configure file for dart-pces-vue-dist(dart-dist).exe",
+    "type":"array",
+    "items": {
+        "minLength": 1,
+        "type":"object",
+        "required": [
+            "path",
+            "url"
+        ],
+        "properties": {
+            "path": {
+                "type": "string",
+                "description": "local file path"
+            },
+            "url": {
+                "type": "string",
+                "description": "git serve url: must start with http://"
+            },
+            "name": {
+                "type": "string",
+                "description": "unique name for item"
+            }
+        }
+    }
+}

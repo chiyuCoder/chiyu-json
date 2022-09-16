@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://26.47.128.120:18000/jin_xingchang/json-schema/raw/master/schema.project-config.json",
+    "title": "pces-vue.project-config",
+    "description": "configure file for dart-pces-vue-dist(dart-dist).exe",
+    "type":"object",
+    "properties": {
+        "type": {
+            "enum": [
+                "whole",
+                "part",
+                "main"
+            ],
+            "description": "whole for full-version(include public/sub-module); part for public-dist/public/sub-module only; main for multi-main-modules"
+        },
+        "dist-repo": {
+            "type": "string",
+            "description": "file path to local-git-folder"
+        },
+        "dir-name": {
+            "type": "string",
+            "description": "sub-module-name; is valid when type is 'part'"
+        },
+        "devOption": {
+            "type":"object",
+            "description": "base-config for --add-component",
+            "properties": {
+                "componentTs": {
+                    "type":"object",
+                    "properties": {
+                        "baseClass": {
+                            "type": "string",
+                            "default": "Vue",
+                            "description": "baseClass for SubVueComponent"
+                        },
+                        "importList": {
+                            "type": "array",
+                            "default": [],
+                            "description": "import list. but do not import 'vue-property-descrator'",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "required": [
+                        "importList"
+                    ]
+                },
+                "componentScss": {
+                    "type": "object",
+                    "properties": {
+                        "importList": {
+                            "type":"array",
+                            "default": [],
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "required": [
+                        "importList"
+                    ]
+                }
+            }
+        }
+    },
+    "required": [
+        "type",
+        "dist-repo"
+    ]
+}
