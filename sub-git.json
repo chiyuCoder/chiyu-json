@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/chiyuCoder/chiyu-json/master/schema.project-config.json",
+    "$id": "https://raw.githubusercontent.com/chiyuCoder/chiyu-json/dev/schema.project-config.json",
     "title": "pces-vue.project-config",
     "description": "configure file for dart-pces-vue-dist(dart-dist).exe",
     "type": "array",
