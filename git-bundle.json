@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/chiyuCoder/chiyu-json/master/git-bundle.json",
+    "$id": "https://raw.githubusercontent.com/chiyuCoder/chiyu-json/dev/git-bundle.json",
     "title": "git-bundle.json",
     "type": "object",
     "required": [],
